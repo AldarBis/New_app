@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <% if logged_in? %>
+      Signed in as, <%= current_user.name%>
+      <%= link_to "Sign out", signout_path %>
+      <% else %>
+      <%= link_to "Sign in with vkontakte", "auth/vkontakte" %>
+      <%= link_to "Sign in with github", "auth/github" %>
+      <% end %>
+      
+      
+  </body>
+</html>
