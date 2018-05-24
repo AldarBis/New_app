@@ -33,6 +33,7 @@ gem 'omniauth-openid', github: 'omniauth/omniauth-openid'
 gem 'omniauth-vkontakte', github: 'mamantoha/omniauth-vkontakte'
 gem 'omniauth-github', github: 'omniauth/omniauth-github'
 gem 'bootstrap-sass', '3.3.7'
+gem 'carrierwave', '~> 1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
