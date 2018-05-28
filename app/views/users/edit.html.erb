@@ -1,0 +1,12 @@
+<% provide(:title, "Edit user") %>
+
+
+  <%= form_for current_user do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :provider %>
+        <%= f.text_field :provider %>
+        <%= f.file_field :image %>
+        <%= f.submit "Сохранить"%>
+        <%= image_tag @user.image.url(:thumb) if @user.image? %>
+  <% end %> 
