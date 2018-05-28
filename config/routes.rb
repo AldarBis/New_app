@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- resources :controller_s
+ resources :users
  root to: 'controller_s#home'
  get 'auth/:provider/callback', to: 'sessions#create'
  get 'signout', to: 'sessions#destroy', as: 'signout'

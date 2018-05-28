@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :image, AvatarUploader
+ # serialize :images, JSON
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first || create_from_omniauth(auth)
   end
