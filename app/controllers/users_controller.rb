@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
+      #redirect_to show_path
       redirect_to root_url
     else
       render 'edit'
@@ -14,6 +15,10 @@ class UsersController < ApplicationController
   end
   
   def user_params
-      params.require(:user).permit(:name, :provider, :image)
+      params.require(:user).permit({images: []}, :remove_images)
   end
+  
+  def show
+  end
+  
 end
